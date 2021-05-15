@@ -4,8 +4,19 @@
 <h1>@ViewData["Title"]</h1>
 
 <div id="home">
-    {{ count }}
-    {{ doneTodos }}
+    <div class="row">
+        <div class="col">
+            {{ count }}
+        </div>
+        <div class="col">
+            {{ doneTodos }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button type="button" class="btn btn-primary" v-on:click="clickMe">Click Me</button>
+        </div>
+    </div>
 </div>
 
 

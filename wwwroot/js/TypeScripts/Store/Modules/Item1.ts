@@ -5,7 +5,18 @@
     },
     getters: {
         doneTodos: function (state) {
-            return state.test
+            return state.test;
         }
-    }
+    },
+    mutations: {
+        setTest(state, payLoad) {
+            state.test = payLoad;
+        }
+    },
+        actions: {
+            setTest(context, payLoad) {
+                context.commit('setTest', payLoad);
+            }
+
+        }
 }

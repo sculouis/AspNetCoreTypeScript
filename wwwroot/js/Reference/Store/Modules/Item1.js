@@ -7,6 +7,16 @@ var item1 = {
         doneTodos: function (state) {
             return state.test;
         }
+    },
+    mutations: {
+        setTest: function (state, payLoad) {
+            state.test = payLoad;
+        }
+    },
+    actions: {
+        setTest: function (context, payLoad) {
+            context.commit('setTest', payLoad);
+        }
     }
 };
 //# sourceMappingURL=Item1.js.map

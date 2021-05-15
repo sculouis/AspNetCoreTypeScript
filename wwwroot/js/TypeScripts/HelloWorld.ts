@@ -1,4 +1,5 @@
 ﻿const mapGetters = Vuex.mapGetters;
+const mapActions = Vuex.mapActions;
 
 Vue.use(Vuex);
 
@@ -14,6 +15,13 @@ const test = new Vue(
         store: store,
         data: {
             count: 100
+        },
+        methods: {
+            ...mapActions('item1', ['setTest']),
+            clickMe() {
+                this.setTest("Change Me");
+            }
+           
         },
         computed: {
             ...mapGetters('item1',['doneTodos']),
