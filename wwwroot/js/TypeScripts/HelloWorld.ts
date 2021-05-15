@@ -1,14 +1,10 @@
-﻿
+﻿const mapGetters = Vuex.mapGetters;
+
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
-    state: {
-        test: "Hello World"
-    },
-    getters: {
-        doneTodos: function(state){
-            return state.test
-        }
+    modules: {
+        item1
     }
 })
 
@@ -20,10 +16,10 @@ const test = new Vue(
             count: 100
         },
         computed: {
-            test() {
-                return this.$store.getters.doneTodos
+            ...mapGetters('item1',['doneTodos']),
+            mycount() {
+                return this.count;
             }
-
         },
         mounted() {
             console.log(this.$store.getters.doneTodos);

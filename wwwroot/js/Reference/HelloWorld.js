@@ -1,12 +1,19 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var mapGetters = Vuex.mapGetters;
 Vue.use(Vuex);
 var store = new Vuex.Store({
-    state: {
-        test: "Hello World"
-    },
-    getters: {
-        doneTodos: function (state) {
-            return state.test;
-        }
+    modules: {
+        item1: item1
     }
 });
 var test = new Vue({
@@ -15,11 +22,9 @@ var test = new Vue({
     data: {
         count: 100
     },
-    computed: {
-        test: function () {
-            return this.$store.getters.doneTodos;
-        }
-    },
+    computed: __assign(__assign({}, mapGetters('item1', ['doneTodos'])), { mycount: function () {
+            return this.count;
+        } }),
     mounted: function () {
         console.log(this.$store.getters.doneTodos);
     }

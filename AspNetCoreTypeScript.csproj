@@ -11,4 +11,12 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\js\TypeScripts\HelloWorld.ts" />
+    <None Include="wwwroot\js\TypeScripts\Store\Modules\Item1.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\js\TypeScripts\Store\" />
+    <Folder Include="wwwroot\js\TypeScripts\Store\Modules\" />
+  </ItemGroup>
 </Project>
