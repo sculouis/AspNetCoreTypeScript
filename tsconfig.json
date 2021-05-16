@@ -8,7 +8,7 @@
     "sourceRoot": "../../TypeScripts",
     "target": "es5",
     "outDir": "wwwroot/js/Reference",
-    "lib": [ "ES2015", "DOM" ]
+    "lib": [ "ES2015", "ES5", "DOM" ]
   },
   "include": [
     "wwwroot/js/TypeScripts/*",
