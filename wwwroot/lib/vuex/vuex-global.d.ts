@@ -3,4 +3,3 @@
 declare global {
     const Vuex: typeof _Vuex
 }
-

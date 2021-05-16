@@ -14,6 +14,7 @@
   <ItemGroup>
     <None Include="wwwroot\js\TypeScripts\HelloWorld.ts" />
     <None Include="wwwroot\js\TypeScripts\Store\Modules\Item1.ts" />
+    <None Include="wwwroot\js\TypeScripts\Store\Modules\item2.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\js\TypeScripts\Store\" />
