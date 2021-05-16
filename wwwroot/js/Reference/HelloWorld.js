@@ -23,14 +23,14 @@ var test = new Vue({
     data: {
         count: 100
     },
-    methods: __assign(__assign({}, mapActions('item1', ['setTest'])), { clickMe: function () {
-            this.setTest("Change Me");
+    methods: __assign(__assign({}, mapActions('item1', [ActionTypes.SET_TEST])), { clickMe: function () {
+            this[ActionTypes.SET_TEST]("Change Me");
         } }),
     computed: __assign(__assign({}, mapGetters('item1', ['doneTodos'])), { mycount: function () {
             return this.count;
         } }),
     mounted: function () {
-        console.log(this.$store.getters.doneTodos);
+        console.log(this.doneTodos);
     }
 });
 //# sourceMappingURL=HelloWorld.js.map

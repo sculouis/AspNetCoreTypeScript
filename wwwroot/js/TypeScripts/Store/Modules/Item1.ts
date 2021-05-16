@@ -1,4 +1,8 @@
-﻿const item1 = {
+﻿enum ActionTypes {
+    SET_TEST = 'SET_TEST',
+}
+
+const item1 = {
     namespaced: true,
     state: {
         test: "Hello World"
@@ -13,10 +17,10 @@
             state.test = payLoad;
         }
     },
-        actions: {
-            setTest(context, payLoad) {
-                context.commit('setTest', payLoad);
-            }
-
+    actions: {
+        [ActionTypes.SET_TEST](context, payLoad) {
+            context.commit('setTest', payLoad);
         }
+
+    }
 }

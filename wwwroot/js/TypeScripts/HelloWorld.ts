@@ -17,9 +17,9 @@ const test = new Vue(
             count: 100
         },
         methods: {
-            ...mapActions('item1', ['setTest']),
+            ...mapActions('item1', [ActionTypes.SET_TEST]),
             clickMe() {
-                this.setTest("Change Me");
+                this[ActionTypes.SET_TEST]("Change Me");
             }
            
         },
@@ -30,7 +30,7 @@ const test = new Vue(
             }
         },
         mounted() {
-            console.log(this.$store.getters.doneTodos);
+            console.log(this.doneTodos);
         }
     }
 )
